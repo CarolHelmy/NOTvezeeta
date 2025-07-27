@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دكتورة ميرنا طارق</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      direction: rtl;
+    }
+
+    
+.header {
+    background: linear-gradient(135deg, #1E88E5 0%, #1565C0 100%);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.country-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: 500;
+}
+    
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      padding: 20px;
+      box-shadow: 0 0 10px #ccc;
+      border-radius: 10px;
+    }
+
+    .doctor-section {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .doctor-section img {
+      width: 150px;
+      height: 150px;
+      background-color: #eee;
+      display: block;
+      object-fit: cover;
+      border-radius: 50%; 
+      border: 2px solid #ccc;
+    }
+
+    .doctor-details h2 {
+      margin-top: 0;
+    }
+     .stars {
+      color: orange;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+    .certificates p {
+      margin: 5px 0;
+    }
+
+    .textbox {
+      padding: 10px;
+      margin: 10px 0;
+      height: 80px;
+    }
+
+    .Squar-container {
+      display: flex;
+      justify-content: space-around;
+      margin: 30px 0;
+    }
+
+   .squar {
+      width: 150px;
+      height: 120px;
+      border: 1px solid #000;
+      border-radius: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .squar:hover {
+      transform: translateY(-5px); 
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+    
+     .booking-times {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    .card {
+      background:  #efeeeed8;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px 15px;
+      width: 100px;
+      text-align: center;
+    }
+    .card h4 {
+      background-color: blue;
+      color: #ffffff;
+      margin: 5px 0;
+    }
+    .card p {
+      margin: 0;
+      font-size: 14px;
+    }
+    .card button {
+      background: red;
+      color: white;
+      border: none;
+      padding: 5px;
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .note {
+      text-align: center;
+      margin: 15px 0;
+      font-size: 18px;
+      color: gray;
+    }
+    
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    button {
+      padding: 10px 30px;
+      font-size: 16px;
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+.footer {
+    background: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}    
+.download-buttons img {
+  height: 50px;
+  margin: 5px 10px 5px 0;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.social-icons {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  gap: 15px; 
+  margin-top: 20px; 
+}
+
+.social-icons a {
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #060607;
+}
+
+
+
+@media (max-width: 768px) {
+  .footer-container, .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 25px;
+  }
+}  
+  </style>
+</head>
+<body>
+       <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../vezeeta/index.html" class="logo">فيزيتا.كوم</a>
+            <nav class="nav-links">
+                <a href="../vezeeta/index.html">فيزيتا للأطباء</a>
+                <a href="#">اتصل بنا</a>
+                <a href="#">دخول</a>
+                <a href="#">انضم الآن</a>
+                <a href="#">عربي</a>
+            </nav>
+            <div class="country-selector">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'><rect fill='%23ff0000' width='24' height='5.33'/><rect fill='%23ffffff' y='5.33' width='24' height='5.33'/><rect fill='%23000000' y='10.67' width='24' height='5.33'/></svg>" alt="مصر" width="24" height="16" style="border-radius: 3px;">
+                <span>مصر</span>
+            </div>
+        </div>
+    </header>
+
+   <div class="container">
+
+    <div class="doctor-section">
+       <img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT8c6297d3fd7b257/Profile/150/merna-tarek-dentistry_20241216185520578.jpg" alt="صورة الدكتور" />
+      <div class="doctor-details">
+        <h2>دكتورة ميرنا طارق</h2>
+        <p><strong>استشارية تجميل وتركيب الأسنان</strong></p>
+        <div class="certificates">
+          <p>شهادات:</p>
+          <p>شهادة تجميل الأسنان وتصميم الابتسامة</p>
+          <p>شهادة البورد الأمريكي في طب الأسنان (NBDE) – أمريكا</p>
+          <p>الزمالة المشتركة لكليات الأسنان(MJDF) – بريطانيا</p>
+            <p>دبلومة في طب الأسنان العام (General Dentistry Diploma)</p>
+           <div class="stars">★★★★☆</div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div>
+      <p><strong>معلومات عن الدكتور:</strong></p>
+        <div class="textbox">
+        <p>دكتور اسنان متخصص في حشو وعلاج الجذور والاعصاب، علاج اللثة، جراحة وجه وفكين، تقويم اسنان، تركيبات اسنان، اسنان مسنين، اشعة الاسنان، زراعة اسنان، اسنان بالغين، تجميل اسنان و اسنان اطفال</p>
+        <p>اخصائي تركيبات وتجميل الاسنان..كليه الجراحين الملكيه البريطانيه ...عضو الاكاديميه الامريكيه لتجميل الاسنان ..متخصص في تجميل الاسنان ..علاج وحشو الجذور والاعصاب ..تقويم وجراحه الاسنان…علاج اسنان الاطفال</p>
+            
+    </div>
+    </div>
+
+    <div>
+      <p><strong>الأعراض والخدمات:</strong></p>
+      <div class="textbox">
+        <p>
+        :تقويم الأسنان
+        لتحسين شكل ووظيفة الأسنان (تقويم شفاف ومعدني).
+        تنظيف وتلميع الأسنان:
+        للتخلص من الجير والبقع وإعادة لمعان الأسنان الطبيعي.
+        ابتسامة هوليود (فينير – لومينير):
+        للحصول على ابتسامة مثالية بدون ألم.
+       
+        </p>
+        <p>
+          جلسة تبييض + تنظيف بسعر مميز لمدة محدودة
+          باقة "ابتسامتك أجمل" لتجميل الأسنان بالتقسيط 
+        </p>
+      </div>
+     <div class="Squar-container">
+      <div class="squar">سعر الكشف:<br>💵 250 جنيه</div>
+      <div class="squar">مدة الانتظار:<br>🕒 32 دقيقة</div>
+    </div>
+  </div>
+  
+    <h2>اختر معاد حجزك</h2>
+    <div class = "booking-times">
+          <div class="card">
+        <h4>الجمعة</h4>
+        <p>من 6:00 م</p>
+        <p>إلى 9:00 م</p>
+        <a href="BOOKING.html"><button>احجز</button></a>
+    </div>
+    <div class="card">
+        <h4>السبت</h4>
+        <p>من 6:00 م</p>
+        <p>إلى 9:00 م</p>
+        <a href="BOOKING.html"><button>احجز</button></a>
+    </div>
+    <div class="card">
+        <h4>الاثنين</h4>
+        <p>من 6:00 م</p>
+        <p>إلى 9:00 م</p>
+        <a href="BOOKING.html"><button>احجز</button></a>
+    </div>
+    <div class="card">
+        <h4>الثلاثاء</h4>
+        <p>من 6:00 م</p>
+        <p>إلى 9:00 م</p>
+        <a href="BOOKING.html"><button>احجز</button></a>
+    </div>   
+    <div class="card">
+        <h4>الاربعاء</h4>
+        <p>من 6:00 م</p>
+        <p>إلى 9:00 م</p>
+        <a href="BOOKING.html"><button>احجز</button></a>
+    </div>   
+    <div class="card">
+        <h4>الخميس</h4>
+        <p>من 6:00 م</p>
+        <p>إلى 9:00 م</p>
+        <a href="BOOKING.html"><button>احجز</button></a>
+    </div>   
+  </div>
+  
+  <div class="note">الدخول مسبقا والدخول باسبقية الحضور</div>
+    <div class="button-container">
+      <a href="BOOKING.html"><button>احجز</button></a>
+    </div>
+    </div>
+   
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">عن فيزيتا</a>
+                <a href="#">اتصل بنا</a>
+                <a href="#">شروط الاستخدام</a>
+                <a href="#">سياسة الخصوصية</a>
+                <a href="#">فيزيتا للأطباء</a>
+                <a href="#">وظائف</a>
+            </div>
+            <p>&copy; 2025 فيزيتا.كوم - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+</body>
+</html>

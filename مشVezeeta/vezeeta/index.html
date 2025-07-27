@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فيزيتا - احجز أفضل دكتور واطلب أدويتك بسهولة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">فيزيتا.كوم</a>
+            <nav class="nav-links">
+                <a href="#">فيزيتا للأطباء</a>
+                <a href="#">اتصل بنا</a>
+                <a href="#">دخول</a>
+                <a href="#">انضم الآن</a>
+                <a href="#">عربي</a>
+            </nav>
+            <div class="country-selector">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'><rect fill='%23ff0000' width='24' height='5.33'/><rect fill='%23ffffff' y='5.33' width='24' height='5.33'/><rect fill='%23000000' y='10.67' width='24' height='5.33'/></svg>" alt="مصر" width="24" height="16" style="border-radius: 3px;">
+                <span>مصر</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">رعاية صحية لحياة أفضل ليك</h1>
+            <p class="hero-subtitle">احجز أونلاين أو كلم ١٦٦٧٦</p>
+            
+            <div class="search-container">
+                <div class="search-tabs">
+                    <button class="search-tab active" onclick="switchTab('doctor')">
+                        <i class="fas fa-user-md"></i> احجز دكتور
+                    </button>
+                    <button class="search-tab" onclick="switchTab('call')">
+                        <i class="fas fa-phone"></i> مكالمة دكتور
+                    </button>
+                </div>
+
+                <form class="search-form" onsubmit="performSearch(event)">
+                    <div class="form-group">
+                        <label class="form-label">ابحث بالتخصص، اسم الدكتور، أو المستشفى</label>
+                        <div class="dropdown">
+                            <input type="text" class="form-input" id="specialtyInput" placeholder="اختار التخصص" onclick="toggleDropdown('specialtyDropdown')" readonly>
+                            <div id="specialtyDropdown" class="dropdown-content">
+                                <div class="dropdown-item" onclick="selectSpecialty('جلدية')">جلدية</div>
+                                <div class="dropdown-item" onclick="selectSpecialty('أسنان')">أسنان</div>
+                                <div class="dropdown-item" onclick="selectSpecialty('نفسي')">نفسي</div>
+                                <div class="dropdown-item" onclick="selectSpecialty('أطفال وحديثي الولادة')">أطفال وحديثي الولادة</div>
+                                <div class="dropdown-item" onclick="selectSpecialty('مخ وأعصاب')">مخ وأعصاب</div>
+                                <div class="dropdown-item" onclick="selectSpecialty('عظام')">عظام</div>
+                                <div class="dropdown-item" onclick="selectSpecialty('نساء وتوليد')">نساء وتوليد</div>
+                                <div class="dropdown-item" onclick="selectSpecialty('أنف وأذن وحنجرة')">أنف وأذن وحنجرة</div>
+                                <div class="dropdown-item" onclick="selectSpecialty('قلب وأوعية دموية')">قلب وأوعية دموية</div>
+                                <div class="dropdown-item" onclick="selectSpecialty('عيون')">عيون</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">المحافظة</label>
+                        <div class="dropdown">
+                            <input type="text" class="form-input" id="governorateInput" placeholder="اختار المحافظة" onclick="toggleDropdown('governorateDropdown')" readonly>
+                            <div id="governorateDropdown" class="dropdown-content">
+                                <div class="dropdown-item" onclick="selectGovernorate('القاهرة')">القاهرة</div>
+                                <div class="dropdown-item" onclick="selectGovernorate('الجيزة')">الجيزة</div>
+                                <div class="dropdown-item" onclick="selectGovernorate('الإسكندرية')">الإسكندرية</div>
+                                <div class="dropdown-item" onclick="selectGovernorate('الساحل الشمالي')">الساحل الشمالي</div>
+                                <div class="dropdown-item" onclick="selectGovernorate('القليوبية')">القليوبية</div>
+                                <div class="dropdown-item" onclick="selectGovernorate('الغربية')">الغربية</div>
+                                <div class="dropdown-item" onclick="selectGovernorate('المنوفية')">المنوفية</div>
+                                <div class="dropdown-item" onclick="selectGovernorate('الفيوم')">الفيوم</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">المنطقة</label>
+                        <div class="dropdown">
+                            <input type="text" class="form-input" id="regionInput" placeholder="اختار المنطقة" onclick="toggleDropdown('regionDropdown')" readonly>
+                            <div id="regionDropdown" class="dropdown-content">
+                                <div class="dropdown-item" onclick="selectRegion('كل المناطق')">كل المناطق</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i> بحث
+                    </button>
+                </form>
+
+                <div class="phone-booking">
+                    أو اتصل على <a href="tel:16676" class="phone-number">١٦٦٧٦</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shamel Banner -->
+    <section class="specialties-section">
+        <div class="shamel-banner">
+            <div class="shamel-logo">Shamel</div>
+            <p>وفر حتي 80% علي جميع الخدمات الطبية</p>
+            <a href="#" style="color: white; text-decoration: underline;">انظر التفاصيل</a>
+        </div>
+    </section>
+
+    <!-- Medical Specialties -->
+    <section class="specialties-section">
+        <h2 class="section-title">جميع التخصصات</h2>
+        
+        <div class="specialties-grid">
+            <a href="../Depatments/Dermatology.html" class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <div class="specialty-name">جلدية</div>
+            </a>
+
+            <a href="../Depatments/Obstetrics&Gynecology.html" class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-tooth"></i>
+                </div>
+                <div class="specialty-name">أسنان</div>
+            </a>
+
+            <a href="../Depatments/Dermatology.html" class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="specialty-name">نفسي</div>
+            </a>
+
+            <a href="#" class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-baby"></i>
+                </div>
+                <div class="specialty-name">أطفال وحديثي الولادة</div>
+            </a>
+
+            <a href="#" class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="specialty-name">مخ وأعصاب</div>
+            </a>
+
+            <a href="#" class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-bone"></i>
+                </div>
+                <div class="specialty-name">عظام</div>
+            </a>
+
+            <a href="../Depatments/Obstetrics&Gynecology.html" class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-female"></i>
+                </div>
+                <div class="specialty-name">نساء وتوليد</div>
+            </a>
+
+            <a href="#" class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-head-side-virus"></i>
+                </div>
+                <div class="specialty-name">أنف وأذن وحنجرة</div>
+            </a>
+
+            <a href="#" class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="specialty-name">قلب وأوعية دموية</div>
+            </a>
+
+            <a href="#" class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="specialty-name">عيون</div>
+            </a>
+
+            <a href="#" class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-lungs"></i>
+                </div>
+                <div class="specialty-name">صدر وجهاز تنفسي</div>
+            </a>
+
+            <a href="#" class="specialty-card">
+                <div class="specialty-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <div class="specialty-name">كل التخصصات</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Top Doctors -->
+    <section class="doctors-section">
+        <div class="doctors-container">
+            <h2 class="section-title">الأطباء الأكثر اختياراً</h2>
+            
+            <div class="doctors-grid">
+                <a href="../Profile/profile 1.html" class="doctor-card">
+                    <div class="doctor-avatar">
+                        <img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT32c43b45f08de6d/Profile/150/ahmed-said-dentistry_20210602173808389.jpg" alt="د. أحمد محمد" />
+                    </div>
+                    <div class="doctor-name">د. أحمد سعيد</div>
+                    <div class="doctor-specialty">جلدية</div>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i> 4.8
+                    </div>
+                    <div class="doctor-location">مدينة نصر</div>
+                </a>
+
+                <a href="../Profile/profile 2.html" class="doctor-card">
+                    <div class="doctor-avatar">
+                        <img src="./psychologist-doaa-maamoun-psychiatry_20250224092429982.jpg" alt="د. فاطمة علي" />
+                    </div>
+                    <div class="doctor-name">د. ميرنا طارق</div>
+                    <div class="doctor-specialty">أسنان</div>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i> 4.9
+                    </div>
+                    <div class="doctor-location">التجمع الخامس</div>
+                </a>
+
+                <a href="../Profile/profile 3.html" class="doctor-card">
+                    <div class="doctor-avatar">
+                        <img src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENTa439b5c0b4d9e573/Profile/150/doctor-roshdy-mohamed-dentistry_20250518234254842.jpg" alt="د. محمد حسن" />
+                    </div>
+                    <div class="doctor-name">د. رشدي محمد </div>
+                    <div class="doctor-specialty">نفسي</div>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i> 4.7
+                    </div>
+                    <div class="doctor-location">الزمالك</div>
+                </a>
+
+                <a href="../Profile/profile 1.html" class="doctor-card">
+                    <div class="doctor-avatar">
+                        <img src="./doctor-omar-ahmed-morsi-oncology-surgery_20241110084412480.jpg" alt="د. نورا سالم" />
+                    </div>
+                    <div class="doctor-name">د. نورا سالم</div>
+                    <div class="doctor-specialty">أطفال</div>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i> 4.6
+                    </div>
+                    <div class="doctor-location">المعادي</div>
+                </a>
+
+                <a href="../Profile/profile 3.html" class="doctor-card">
+                    <div class="doctor-avatar">
+                        <img src="./ahmed-salah-sabra-gastroenterology-and-endoscopy_20250421184949030.jpg" alt="د. خالد يوسف" />
+                    </div>
+                    <div class="doctor-name">د. خالد يوسف</div>
+                    <div class="doctor-specialty">عظام</div>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i> 4.7
+                    </div>
+                    <div class="doctor-location">الدقي والمهندسين</div>
+                </a>
+
+                <a href="../Profile/profile 2.html" class="doctor-card">
+                    <div class="doctor-avatar">
+                        <img src="./clinic-muhammad-almessry-spinal-surgery_20190507130902275.jpg" alt="د. موريس فكري" />
+                    </div>
+                    <div class="doctor-name">د. موريس فكري</div>
+                    <div class="doctor-specialty">جراحة تجميل</div>
+                    <div class="doctor-rating">
+                        <i class="fas fa-star"></i> 4.7
+                    </div>
+                    <div class="doctor-location">مدينة نصر</div>
+                </a>
+            </div>
+
+            <a href="#" class="show-more-btn">أظهر المزيد</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">عن فيزيتا</a>
+                <a href="#">اتصل بنا</a>
+                <a href="#">شروط الاستخدام</a>
+                <a href="#">سياسة الخصوصية</a>
+                <a href="#">فيزيتا للأطباء</a>
+                <a href="#">وظائف</a>
+            </div>
+            <p>&copy; 2025 فيزيتا.كوم - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

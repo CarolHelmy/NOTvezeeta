@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+  <meta charset="UTF-8">
+  <title>دكاترة نسا وتوليد</title>
+  <style>
+    
+.footer {
+    background: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}    
+.download-buttons img {
+  height: 50px;
+  margin: 5px 10px 5px 0;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.social-icons {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  gap: 15px; 
+  margin-top: 20px; 
+}
+
+.social-icons a {
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #060607;
+}
+
+
+
+.header {
+    background: linear-gradient(135deg, #1E88E5 0%, #1565C0 100%);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.country-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: 500;
+}
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 0px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .doctor-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      padding: 70px;
+      margin-bottom: 30px;
+      width: 120%;
+      max-width: 700px;
+      transition: transform 0.3s ease;
+    }
+
+    .doctor-card:hover {
+      transform: scale(1.02);
+    }
+
+    .doctor-image {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-left: 30px;
+      border: 3px solid #004aad;
+    }
+
+    .specialization-image {
+      width: 700px;
+      height: 400px;
+    }
+
+    .doctor-info {
+      flex: 1;
+    }
+
+    .doctor-name {
+      font-size: 32px;
+      font-weight: bold;
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    .doctor-specialty {
+      color: #666;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .stars {
+      color: orange;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .detail {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .green {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+   <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../vezeeta/index.html" class="logo">فيزيتا.كوم</a>
+            <nav class="nav-links">
+                <a href="../vezeeta/index.html">فيزيتا للأطباء</a>
+                <a href="#">اتصل بنا</a>
+                <a href="#">دخول</a>
+                <a href="#">انضم الآن</a>
+                <a href="#">عربي</a>
+            </nav>
+            <div class="country-selector">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'><rect fill='%23ff0000' width='24' height='5.33'/><rect fill='%23ffffff' y='5.33' width='24' height='5.33'/><rect fill='%23000000' y='10.67' width='24' height='5.33'/></svg>" alt="مصر" width="24" height="16" style="border-radius: 3px;">
+                <span>مصر</span>
+            </div>
+        </div>
+    </header>
+  <div class="specialization-card">
+    <img class="specialization-image" src="https://d1aovdz1i2nnak.cloudfront.net/vezeeta-web-reactjs/jenkins-25/images/specialties/gynaecology-and-infertility/eg/desktop.webp" alt="نسا وتوليد">
+    <div class="doctor-info">
+      <div class="specialization-name text-center"><h1>نسا وتوليد</h1></div>
+    </div>
+  </div>
+
+<!-- كارت 1 -->
+<div class="doctor-card">
+  <a href="../Profile/profile 1.html"><img class="doctor-image" src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENTa02a5c/Profile/150/doctor-mohamed-ali-ragab-gynaecology-and-infertility_20210201231056955.jpg" alt="دكتور هشام طلعت"></a>
+  <div class="doctor-info">
+    <a href="../Profile/profile 1.html"><div class="doctor-name">دكتور هشام طلعت</div></a>
+    <div class="doctor-specialty">استشاري نسا وتوليد وتأخر الحمل</div>
+    <div class="stars">★★★★★</div>
+    <div class="detail">📍 مدينة نصر - شارع الطيران</div>
+    <div class="detail">💵 الكشف: ٣٠٠ جنيه</div>
+    <div class="detail">📞 رقم التواصل: ٠١٠٠٦٠٠٤٤٢٢</div>
+  </div>
+</div>
+
+<!-- كارت 2 -->
+<div class="doctor-card">
+  <a href="../Profile/profile 2.html"><img class="doctor-image" src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT4d8a4f2411b8029d/Profile/150/doctor-samar-ahmed-ghazy-gynaecology-and-infertility_20220616174155397.jpg" alt="دكتورة نادين سامي"></a>
+  <div class="doctor-info">
+    <a href="../Profile/profile 2.html"><div class="doctor-name">دكتورة نادين سامي</div></a>
+    <div class="doctor-specialty">استشارية نسا وتوليد وجراحة مناظير</div>
+    <div class="stars">★★★★☆</div>
+    <div class="detail">📍 فيصل - شارع العشرين</div>
+    <div class="detail">💵 الكشف: ٣٥٠ جنيه</div>
+    <div class="detail green">🕒 الانتظار: ٢٥ دقيقة</div>
+    <div class="detail">📞 رقم التواصل: ٠١٠٢٣٣٤٥٥١١</div>
+  </div>
+</div>
+
+<!-- كارت 3 -->
+<div class="doctor-card">
+  <a href="../Profile/profile 3.html"><img class="doctor-image" src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT3b0725835516194/Profile/150/doctor-hesham-bryk-gynaecology-and-infertility_20231101004050408.jpg" alt="دكتور أحمد مراد"></a>
+  <div class="doctor-info">
+    <a href="../Profile/profile 3.html"><div class="doctor-name">دكتور أحمد مراد</div></a>
+    <div class="doctor-specialty">أخصائي نسا وتوليد ومتابعة الحمل الحرج</div>
+    <div class="stars">★★★★☆</div>
+    <div class="detail">📍 ٦ أكتوبر - الحي الثامن</div>
+    <div class="detail">💵 الكشف: ٢٧٠ جنيه</div>
+    <div class="detail">📞 رقم التواصل: ٠١٢٢٣٣٤٤٥٥٦</div>
+  </div>
+</div>
+
+<!-- كارت 4 -->
+<div class="doctor-card">
+  <img class="doctor-image" src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENTc22691d00e613c2f/Profile/150/sahar-abdelmonem-gynaecology-and-infertility_20250217224541824.jpg" alt="دكتورة منى عبد الحميد">
+  <div class="doctor-info">
+    <div class="doctor-name">دكتورة منى عبد الحميد</div>
+    <div class="doctor-specialty">استشارية نسا وتوليد وحقن مجهري</div>
+    <div class="stars">★★★★★</div>
+    <div class="detail">📍 المهندسين - شارع جامعة الدول</div>
+    <div class="detail">💵 الكشف: ٤٠٠ جنيه</div>
+    <div class="detail green">🕒 الانتظار: ٢٠ دقيقة</div>
+    <div class="detail">📞 رقم التواصل: ٠١١١٢٢٣٣٤٤٥</div>
+  </div>
+</div>
+
+<!-- كارت 5 -->
+<div class="doctor-card">
+  <img class="doctor-image" src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENTb147bbeaaa4d3647/Profile/150/moniem-al-wakiel-gynaecology-and-infertility_20240402153101539.jpg" alt="دكتور كريم سامي">
+  <div class="doctor-info">
+    <div class="doctor-name">دكتور كريم سامي</div>
+    <div class="doctor-specialty">أخصائي نسا وتوليد وعمليات الولادة القيصرية</div>
+    <div class="stars">★★★☆☆</div>
+    <div class="detail">📍 المعادي - شارع اللاسلكي</div>
+    <div class="detail">💵 الكشف: ٣٢٠ جنيه</div>
+    <div class="detail">📞 رقم التواصل: ٠١٠٠٧٧٨٨٩٩٠</div>
+  </div>
+</div>
+ <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">عن فيزيتا</a>
+                <a href="#">اتصل بنا</a>
+                <a href="#">شروط الاستخدام</a>
+                <a href="#">سياسة الخصوصية</a>
+                <a href="#">فيزيتا للأطباء</a>
+                <a href="#">وظائف</a>
+            </div>
+            <p>&copy; 2025 فيزيتا.كوم - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+</body>
+</html>

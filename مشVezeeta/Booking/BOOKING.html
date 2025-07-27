@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Booking page</title>
+    <style>
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:  #f5f5f5;
+            direction: rtl;
+      
+        }
+
+        header {
+            background-color: #4285f4;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: bold;
+            background-color: white;
+            color: #4285f4;
+            padding: 5px 10px;
+            border-radius: 4px;
+    }
+
+     nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+        
+
+        .booking-form {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .doctor-info {
+            margin-bottom: 20px;
+        }
+
+        .doctor-info p {
+            margin: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .doctor-info ul {
+            list-style: disc;
+            padding-right: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form textarea {
+            resize: vertical;
+        }
+
+        form input[type="radio"] {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #0077b6;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #005f87;
+        }
+    </style>
+</head>
+<body>
+   
+    
+    
+    <main>
+
+        
+  <header>
+    <div class="logo">Vezeeta</div>
+    <nav>
+      <a href="#">عرض التخصصات</a>
+      <a href="#">تواصل معنا</a>
+    </nav>
+  </header>
+        <section class="booking-form">
+           
+            <div class="doctor-info">
+                <p>اسم الدكتور / الاخصائي اللي هتحجز عنده</p>
+                <p>تخصصه</p>
+                <p>المواعيد المتاحة:</p>
+                <ul>
+                    <li>ميعاد ١</li>
+                    <li>ميعاد ٢</li>
+                    <li>ميعاد ٣</li>
+                </ul>
+            </div>
+
+            <form>
+                <label>الاسم
+                    <input type="text" required>
+                </label>
+
+                <label>السن
+                    <input type="number" required>
+                </label>
+
+                <label>النوع
+                    <select>
+                        <option>أنثى</option>
+                        <option>ذكر</option>
+                        <option selected>أخرى</option>
+                    </select>
+                </label>
+
+                <label>اختر أحد المواعيد المتاحة: 
+                    <select>
+                        <option>اختر أحد المواعيد المتاحة:</option>
+                    </select>
+                </label>
+
+                <label>هل تعاني من أمراض مزمنة؟
+                    <input type="radio" name="chronic"> نعم
+                    <input type="radio" name="chronic"> لا
+                </label>
+
+                <label>إذا كانت الإجابة نعم، اذكرها
+                    <input type="text">
+                </label>
+
+                <label>هل خضعت لعلاج مؤخراً؟
+                    <input type="radio" name="recent"> نعم
+                    <input type="radio" name="recent"> لا
+                </label>
+
+                <label>إذا كانت الإجابة نعم، اذكرها
+                    <input type="text">
+                </label>
+
+                <label>الأعراض:
+                    <textarea rows="4"></textarea>
+                </label>
+
+                <button type="submit">احجز الآن</button>
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>

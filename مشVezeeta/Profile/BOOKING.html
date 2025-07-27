@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Booking page</title>
+    <style>
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:  #f5f5f5;
+            direction: rtl;
+      
+        }
+
+        
+.header {
+    background: linear-gradient(135deg, #1E88E5 0%, #1565C0 100%);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.country-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: 500;
+}
+        .booking-form {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .doctor-info {
+            margin-bottom: 20px;
+        }
+
+        .doctor-info p {
+            margin: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .doctor-info ul {
+            list-style: disc;
+            padding-right: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form textarea {
+            resize: vertical;
+        }
+
+        form input[type="radio"] {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #0077b6;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #005f87;
+        }
+    </style>
+</head>
+<body>
+   
+    
+    
+    <main>
+
+      <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../vezeeta/index.html" class="logo">فيزيتا.كوم</a>
+            <nav class="nav-links">
+                <a href="../vezeeta/index.html">فيزيتا للأطباء</a>
+                <a href="#">اتصل بنا</a>
+                <a href="#">دخول</a>
+                <a href="#">انضم الآن</a>
+                <a href="#">عربي</a>
+            </nav>
+            <div class="country-selector">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'><rect fill='%23ff0000' width='24' height='5.33'/><rect fill='%23ffffff' y='5.33' width='24' height='5.33'/><rect fill='%23000000' y='10.67' width='24' height='5.33'/></svg>" alt="مصر" width="24" height="16" style="border-radius: 3px;">
+                <span>مصر</span>
+            </div>
+        </div>
+    </header>
+
+        <section class="booking-form">
+           
+            <div class="doctor-info">
+                <p>اسم الدكتور / الاخصائي اللي هتحجز عنده</p>
+                <p>تخصصه</p>
+                <p>المواعيد المتاحة:</p>
+                <ul>
+                    <li>ميعاد ١</li>
+                    <li>ميعاد ٢</li>
+                    <li>ميعاد ٣</li>
+                </ul>
+            </div>
+
+            <form action="../vezeeta/index.html">
+                <label>الاسم
+                    <input type="text" required>
+                </label>
+
+                <label>السن
+                    <input type="number" required>
+                </label>
+
+                <label>النوع
+                    <select>
+                        <option>أنثى</option>
+                        <option>ذكر</option>
+                        <option selected>أخرى</option>
+                    </select>
+                </label>
+
+                <label>اختر أحد المواعيد المتاحة: 
+                    <select>
+                        <option>اختر أحد المواعيد المتاحة:</option>
+                    </select>
+                </label>
+
+                <label>هل تعاني من أمراض مزمنة؟
+                    <input type="radio" name="chronic"> نعم
+                    <input type="radio" name="chronic"> لا
+                </label>
+
+                <label>إذا كانت الإجابة نعم، اذكرها
+                    <input type="text">
+                </label>
+
+                <label>هل خضعت لعلاج مؤخراً؟
+                    <input type="radio" name="recent"> نعم
+                    <input type="radio" name="recent"> لا
+                </label>
+
+                <label>إذا كانت الإجابة نعم، اذكرها
+                    <input type="text">
+                </label>
+
+                <label>الأعراض:
+                    <textarea rows="4"></textarea>
+                </label>
+
+                <button type="submit">احجز الآن</button>
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>
